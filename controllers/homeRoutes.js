@@ -9,12 +9,8 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/profile', (res, req) => {
-    res.render('profile');
+    res.render('post');
 })
-
-
-
-
 
 
 
