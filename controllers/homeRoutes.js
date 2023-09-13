@@ -16,14 +16,7 @@ router.get('/login', (req, res) => {
 
 router.get('/forum', withAuth, async (req, res) => {
     try {
-        const forumData = await Forum.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
-        });
+        const forumData = await Forum.findAll();
         const forums = forumData.map((forum) => forum.get({ plain: true }));
         res.render('forum', {
             forums,

@@ -1,6 +1,15 @@
 const router = require('express').Router();
 const { Forum } = require('../../models');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../../utlis/auth');
+
+router.get('/', async (req, res) => {
+    try {
+        const forumData = await Forum.findAll();
+        res.status(200).json(forumData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 router.post('/', withAuth, async (req, res) => {
     try {
