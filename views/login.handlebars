@@ -1,11 +1,11 @@
 {{!-- login side --}}
-
 <div class="columns">
-  <div class="column is-one-third">
+  <div class="column is-two-fifths">
     <br>
+<form class="login-form">
 <div class="field">
   <p class="control has-icons-left has-icons-right">
-    <input class="input" type="text" placeholder="Username">
+    <input class="input" type="text" placeholder="Username" id="username-login">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -16,7 +16,7 @@
 </div>
 <div class="field">
   <p class="control has-icons-left">
-    <input class="input" type="password" placeholder="Password">
+    <input class="input" type="password" placeholder="Password" id="password-login">
     <span class="icon is-small is-left">
       <i class="fas fa-lock"></i>
     </span>
@@ -24,40 +24,39 @@
 </div>
 <div class="field">
   <p class="control">
-    <button class="button is-success">
+    <button class="button is-success" type="submit">
       Login
     </button>
   </p>
 </div>
+</form>
 </div>
 
 {{!-- signup side --}}
-<div class="column is-one-third">
+<div class="column is-two-fifths">
     <br>
+<form class="signup-form">
 <div class="field">
-  <p class="control has-icons-left has-icons-right">
-    <input class="input" type="text" placeholder="Username">
+  <div class="control has-icons-left has-icons-right">
+    <input class="input" type="text" placeholder="Username" id="username-signup">
     <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
+      <i class="fas fa-user"></i>
     </span>
     <span class="icon is-small is-right">
       <i class="fas fa-check"></i>
     </span>
-  </p>
-</div>
 
 <div class="field">
   <p class="control has-icons-left">
-    <input class="input" type="password" placeholder="Password">
+    <input class="input" type="password" placeholder="Password" id="password-signup">
     <span class="icon is-small is-left">
       <i class="fas fa-lock"></i>
     </span>
   </p>
 </div>
-
 <div class="field">
   <p class="control has-icons-left has-icons-right">
-    <input class="input" type="email" placeholder="Email">
+    <input class="input" type="email" placeholder="Email" id="email-signup">
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
@@ -68,14 +67,15 @@
 </div>
 <div class="field">
   <p class="control">
-    <button class="button is-success">
+    <button class="button is-success" type="submit">
       Sign up
     </button>
   </p>
 </div>
-
+</form>
 </div>
 </div>
 </div>
 </div>
 
+<script src="/js/login.js"></script>
