@@ -31,6 +31,10 @@ router.get('/forum/:id', (req, res) => {
     res.render('forum');
 })
 
+router.get('/contact', (req, res) => {
+    res.render('contact');
+})
+
 
 module.exports = router;
 
