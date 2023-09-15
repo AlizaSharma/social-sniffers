@@ -11,10 +11,15 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/login', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/forum');
+        return
+    }
     res.render('login');
 })
 
 router.get('/forum', withAuth, async (req, res) => {
+    console.log('hi this route is working')
     try {
         const forumData = await Forum.findAll();
         const forums = forumData.map((forum) => forum.get({ plain: true }));
